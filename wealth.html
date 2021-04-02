@@ -8,18 +8,13 @@
 
 <form action="/action_page.php">
   <label for="cars">Choose a car:</label>
-  <select name="cars" id="cars">
-    <option value="bill gates">18.5B</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
+  <select name="money" id="money">
+    {{ bill }}
   </select>
   <br><br>
   <input type="submit" value="Submit">
 </form>
 
-<p>Click the "Submit" button and the form-data will be sent to a page on the 
-server called "action_page.php".</p>
 
 </body>
 </html>
