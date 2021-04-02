@@ -5,11 +5,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def render_main():
-    return render_template('index.html')
+    return render_template('home_page.html')
+@app.route("/big_money")
+def render_dog():
+    return render_template('wealth.html')
 
 def get_state_options():
-    with open('county_demographics.json') as f:
-        data = json.load(f)
+    #with open('county_demographics.json') as f:
+       # data = json.load(f)
     listOfStates = []
     for x in data:
         if data['State'] in listOfStates:
