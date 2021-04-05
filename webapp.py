@@ -10,9 +10,9 @@ def render_main():
 def render_dog():
     return render_template('wealth.html')
 
-def get_state_options():
-    #with open('county_demographics.json') as f:
-       # data = json.load(f)
+def wealth_ammount():
+    with open('county_demographics.json') as f:
+        data = json.load(f)
     listOfStates = []
     for x in data:
         if data['State'] in listOfStates:
