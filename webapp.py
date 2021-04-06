@@ -11,7 +11,7 @@ def render_dog():
     return render_template('wealth.html')
 
 def wealth_ammount():
-    with open('county_demographics.json') as f:
+    with open('billionaires.json') as f:
         data = json.load(f)
     listOfStates = []
     for x in data:
