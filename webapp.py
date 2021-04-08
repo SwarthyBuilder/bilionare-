@@ -9,7 +9,7 @@ def render_main():
 @app.route("/big_money")
 def render_dog():
     return render_template('wealth.html',bill=wealth_ammount())
-@app.route("/graph_page.html"):
+@app.route("/graph_page")
 def render_graph():
     return render_template('graph_page.html')
 def wealth_ammount():
