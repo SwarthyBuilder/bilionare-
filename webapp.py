@@ -11,7 +11,12 @@ def render_dog():
     return render_template('wealth.html',bill=wealth_ammount())
 @app.route("/wealth2")
 def render_cat():
-    return render_template('wealth.html',bill=wealth_ammount())
+    return render_template('wealth.html',bill=wealth_ammount(),coin=search(request.args["money"]))
+def search(number): 
+    with open('billionaires.json') as f:
+        data = json.load(f)
+        for x in data:
+            if x['wealth']['worth in billions'] in number
 @app.route("/graph_page")
 def render_graph():
     return render_template('graph_page.html')
