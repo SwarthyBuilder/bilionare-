@@ -9,7 +9,9 @@ def render_main():
 @app.route("/big_money")
 def render_dog():
     return render_template('wealth.html',bill=wealth_ammount())
-
+@app.route("/action"):
+    def render_dog():
+    return render_template('action.html',bill=wealth_ammount())
 def wealth_ammount():
     with open('billionaires.json') as f:
         data = json.load(f)
@@ -24,3 +26,4 @@ def wealth_ammount():
     return options
 if __name__ =="__main__":
     app.run(debug=False,port=54321)
+    
