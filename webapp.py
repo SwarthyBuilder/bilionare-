@@ -9,9 +9,9 @@ def render_main():
 @app.route("/big_money")
 def render_dog():
     return render_template('wealth.html',bill=wealth_ammount())
-@app.route("/action"):
-    def render_dog():
-    return render_template('action.html',bill=wealth_ammount())
+@app.route("/graph_page.html"):
+def render_graph():
+    return render_template('graph_page.html')
 def wealth_ammount():
     with open('billionaires.json') as f:
         data = json.load(f)
