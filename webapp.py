@@ -31,7 +31,7 @@ def wealth_ammount():
             amountOfmoney.append(x['wealth']['worth in billions'])
     print("data")
     @app.route('year')
-def year_founded():
+def year_founded()
     return render_template('wealth.html')
     
     for number in amountOfmoney:
