@@ -42,8 +42,8 @@ def years_old():
     amountOfmoney = []
     options=""
     for x in data:
-        if not x['wealth']['founded'] in amountOfmoney:
-            amountOfmoney.append(x['wealth']['worth in billions'])
+        if not x['company']['founded'] in amountOfmoney:
+            amountOfmoney.append(x['company']['founded'])
     print("data")
     for number in amountOfmoney:
         options += Markup("<option value=\"" + str(number) + "\">" + str(number) + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
