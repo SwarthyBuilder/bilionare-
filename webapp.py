@@ -35,7 +35,7 @@ def wealth_ammount():
     return options
 @app.route('/year')
 def year_founded():
-    return render_template('wealth.html')
+    return render_template('wealth.html',bill=years_old())
 def years_old():
     with open('billionaires.json') as f:
         data = json.load(f)
