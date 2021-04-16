@@ -30,13 +30,13 @@ def wealth_ammount():
         if not x['wealth']['worth in billions'] in amountOfmoney:
             amountOfmoney.append(x['wealth']['worth in billions'])
     print("data")
+    for number in amountOfmoney:
+        options += Markup("<option value=\"" + str(number) + "\">" + str(number) + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
+    return options
 @app.route('/year')
 def year_founded():
     return render_template('wealth.html')
     
-    for number in amountOfmoney:
-        options += Markup("<option value=\"" + str(number) + "\">" + str(number) + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
-    return options
 if __name__ =="__main__":
     app.run(debug=False,port=54321)
     
