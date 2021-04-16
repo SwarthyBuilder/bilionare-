@@ -30,7 +30,7 @@ def wealth_ammount():
         if not x['wealth']['worth in billions'] in amountOfmoney:
             amountOfmoney.append(x['wealth']['worth in billions'])
     print("data")
-   @app.route('year'):
+    @app.route('year'):
 def year_founded():
     return render_template('wealth.html')
     
