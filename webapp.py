@@ -42,7 +42,7 @@ def years_old():
     amountOfmoney = []
     options=""
     for x in data:
-        if not x['wealth'][''] in amountOfmoney:
+        if not x['wealth']['founded'] in amountOfmoney:
             amountOfmoney.append(x['wealth']['worth in billions'])
     print("data")
     for number in amountOfmoney:
