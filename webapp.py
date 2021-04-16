@@ -36,7 +36,18 @@ def wealth_ammount():
 @app.route('/year')
 def year_founded():
     return render_template('wealth.html')
-    
+def years_old():
+    with open('billionaires.json') as f:
+        data = json.load(f)
+    amountOfmoney = []
+    options=""
+    for x in data:
+        if not x['wealth'][''] in amountOfmoney:
+            amountOfmoney.append(x['wealth']['worth in billions'])
+    print("data")
+    for number in amountOfmoney:
+        options += Markup("<option value=\"" + str(number) + "\">" + str(number) + "</option>") #Use Markup so <, >, " are not escaped lt, gt, etc.
+    return options
 if __name__ =="__main__":
     app.run(debug=False,port=54321)
     
